@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
 
 class Solution
 {
@@ -13,10 +12,8 @@ public:
             return 0;
 
         for (int i = 0; i < prices.size() - 1; i++)
-        {
             if (prices[i + 1] > prices[i])
                 profit += (prices[i + 1] - prices[i]);
-        }
 
         return profit;
     }
@@ -29,5 +26,5 @@ int main()
     
     A.maxProfit(X);
 
-	return 0;
+    return 0;
 }
