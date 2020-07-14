@@ -24,7 +24,6 @@ int main()
     Solution A;
     std::vector<int> X{ 7,1,5,3,6,4 };
     
-    A.maxProfit(X);
-
+    std::cout<<"\n Maximum Weekly Profit: "<< A.maxProfit(X);
     return 0;
 }
