@@ -11,3 +11,16 @@ public:
     }
 };
 
+int main()
+{
+    int K=3;
+    Solution A;
+    
+    std::vector<int> X{ 1,2,3,4,5,6,7,8 };
+    A.rotate(X,K);
+    
+    for(int i=0;i<X.size();i++)
+        std::cout<<" "<< X[i];
+    
+    return 0;
+}
