@@ -29,22 +29,22 @@ void insert(int x)
 
 void display()
 {
-	int i = 0; 
-	node* ptr = head;
+	int i = 0; // stores node element position count
+	node* ptr = head; // let ptr be the temporary variable equal to head pointer ( used to traverse in L.L )
 
-	if (head == NULL)
+	if (head == NULL) // if the linked list is empty then of course the first element itself should be empty (BRUHH!!)
 		std::cout << "[EMPTY LINKED LIST]";
 	
-	while (ptr != NULL)
+	while (ptr != NULL) // if the head is not null then we first print data then HOP to next element in the ptr pointer variable itself
 	{
 		std::cout <<"\nNode Element ("<< i++ <<") Data = "<< ptr->data;
-		ptr = ptr->next;
+		ptr = ptr->next; // ptr pointing to next node element address itself
 	}
 }
 
 int main()
 {
-	insert(1); insert(2); insert(3); insert(4); insert(5);
-	display();
+	insert(1); insert(2); insert(3); insert(4); insert(5); // inserting 5 elements randomly in the linked list 
+	display(); // printing all the elements of the linked list
 	return NULL;
 }
