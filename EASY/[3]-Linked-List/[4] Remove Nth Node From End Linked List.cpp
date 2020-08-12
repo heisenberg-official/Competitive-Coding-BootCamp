@@ -1,29 +1,53 @@
-class Solution
+#include<iostream>
+
+struct ListNode 
+{
+     int val;
+     ListNode *next;
+     ListNode() : val(0), next(nullptr) {}
+     ListNode(int x) : val(x), next(nullptr) {}
+     ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
+class Solution 
 {
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n)
+    Solution()
     {
-        if(head->next==NULL)
-            
-        int length = 0;
+        std::ios_base::sync_with_stdio(false);
+        std::cin.tie(0);
+    }
+    ListNode* removeNthFromEnd(ListNode* head, int n) 
+    {
+        if(head == NULL)
+            return NULL;
         
-        ListNode* temp = head;
-        ListNode* temp0 = head;
+        int len = 0;
         
-        while (temp != NULL)
+        ListNode* cur = head, * prev = NULL;
+        
+        while(cur != NULL)
         {
-            length++;
-            temp=temp->next;
+            len++;
+            cur = cur->next;
         }
         
-        length-=n;
-        
-        while (length>1)
+        if(len == n)
         {
-            length--;  
-            temp0=temp0->next;
+            return head->next;
         }
-        temp0->next=temp0->next->next;
+        
+        cur = head;
+        
+        len -= n;
+        
+        while(len--)
+        {
+            prev = cur;
+            cur = cur->next;
+        }
+        prev->next = cur->next;
+        
         return head;
     }
 };
