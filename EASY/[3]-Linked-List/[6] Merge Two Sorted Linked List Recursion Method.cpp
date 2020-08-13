@@ -24,7 +24,7 @@ public:
         if(!x2)
             return x1;
         ListNode* head = x1->val <= x2->val ? x1 : x2;
-        head->next = x1->val <= x2->val ? mergeTwoLists(x1->next,x2) : mergeTwoLists(x1,x2->next); //Using Recursive Method To 
+        head->next = x1->val <= x2->val ? mergeTwoLists(x1->next,x2) : mergeTwoLists(x1,x2->next); //Using Recursion
         return head;
     }
 };
