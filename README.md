@@ -2,4 +2,3 @@
 1) Will try my best to write the most efficient algorithms.
 2) If you got better idea and optimisation, pull request are always welcome.
 3) Just started with competitive programming, learning from others, suggestions and discussion are always welcome.
-4) Will solve one problem everyday with its writeup, So Let's get started folks.
